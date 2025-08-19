@@ -4,7 +4,7 @@ from models import Note, NoteCreate, NoteUpdate
 from database import notes_db, get_next_id
 from fastapi import Depends, Header
 
-API_KEY = "sk-qrstefghuvwxabcdqrstefghuvwxabcdqrstefgh" 
+API_KEY = "xx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
 def verify_api_key(x_api_key: str = Header(...)):
     if x_api_key != API_KEY:
         raise HTTPException(status_code=403, detail="Invalid or missing API Key")
